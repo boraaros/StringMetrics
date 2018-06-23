@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>StringMetrics</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Adrian Bilics</Authors>
+    <Description>String metrics</Description>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/boraaros/StringMetrics/tree/master/StringMetrics</PackageProjectUrl>
+    <PackageTags>string metrics</PackageTags>
   </PropertyGroup>
 
 </Project>
