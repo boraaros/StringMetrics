@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringMetrics", "StringMetrics\StringMetrics.csproj", "{8326C922-292E-42DB-BA50-8E5CEEE52899}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringMetrics.UnitTests", "StringMetrics.UnitTests\StringMetrics.UnitTests.csproj", "{4C8535C6-A0D0-4107-BD2E-BE0C63F54281}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8326C922-292E-42DB-BA50-8E5CEEE52899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8326C922-292E-42DB-BA50-8E5CEEE52899}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8326C922-292E-42DB-BA50-8E5CEEE52899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C8535C6-A0D0-4107-BD2E-BE0C63F54281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C8535C6-A0D0-4107-BD2E-BE0C63F54281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C8535C6-A0D0-4107-BD2E-BE0C63F54281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C8535C6-A0D0-4107-BD2E-BE0C63F54281}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
