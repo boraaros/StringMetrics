@@ -4,12 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>StringMetrics</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <Authors>Adrian Bilics</Authors>
-    <Description>String metrics</Description>
+    <Description>Simple and clean string metrics implementations: Hamming, Levenshtein and Damerau-Levenshtein</Description>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/boraaros/StringMetrics/tree/master/StringMetrics</PackageProjectUrl>
-    <PackageTags>string metrics</PackageTags>
+    <PackageTags>string metrics distance similarity hamming damerau levenshtein</PackageTags>
   </PropertyGroup>
 
 </Project>
