@@ -21,35 +21,37 @@ namespace StringMetrics
             return RecursiveCalculation(one, other, one.Length, other.Length);
         }
 
-        private int RecursiveCalculation(string one, string other, int oneSubLength, int otherSubLength)
+        protected virtual int RecursiveCalculation(string one, string other, int onePrefixLength, int otherPrefixLength)
         {
-            if (oneSubLength == 0 || otherSubLength == 0)
+            if (onePrefixLength == 0 || otherPrefixLength == 0)
             {
-                return Math.Max(oneSubLength, otherSubLength);
+                return Math.Max(onePrefixLength, otherPrefixLength);
             }
 
-            return new List<int>
+            IList<int> cases = new List<int>
             {
-                Insert(one, other, oneSubLength, otherSubLength),
-                Delete(one, other, oneSubLength, otherSubLength),
-                Substitute(one, other, oneSubLength, otherSubLength)
-            }.Min();
+                Insertion(one, other, onePrefixLength, otherPrefixLength),
+                Deletion(one, other, onePrefixLength, otherPrefixLength),
+                Substitution(one, other, onePrefixLength, otherPrefixLength)
+            };
+
+            return cases.Min();
         }
 
-        private int Insert(string one, string other, int oneSubLength, int otherSubLength)
+        protected int Insertion(string one, string other, int onePrefixLength, int otherPrefixLength)
         {
-            return RecursiveCalculation(one, other, oneSubLength - 1, otherSubLength) + 1;
+            return RecursiveCalculation(one, other, onePrefixLength - 1, otherPrefixLength) + 1;
         }
 
-        private int Delete(string one, string other, int oneSubLength, int otherSubLength)
+        protected int Deletion(string one, string other, int onePrefixLength, int otherPrefixLength)
         {
-            return RecursiveCalculation(one, other, oneSubLength, otherSubLength - 1) + 1;
+            return RecursiveCalculation(one, other, onePrefixLength, otherPrefixLength - 1) + 1;
         }
 
-        private int Substitute(string one, string other, int oneSubLength, int otherSubLength)
+        protected int Substitution(string one, string other, int onePrefixLength, int otherPrefixLength)
         {
-            return RecursiveCalculation(one, other, oneSubLength - 1, otherSubLength - 1)
-                 + (AreEqual(one[oneSubLength - 1], other[otherSubLength - 1]) ? 0 : 1);
+            return RecursiveCalculation(one, other, onePrefixLength - 1, otherPrefixLength - 1)
+                 + (AreEqual(one[onePrefixLength - 1], other[otherPrefixLength - 1]) ? 0 : 1);
         }
     }
 }
